@@ -1,0 +1,13 @@
+name: Regression Test
+
+on: [push, pull_request]
+
+jobs:
+  regresstion_tests:
+    runs-on: ubuntu-latest
+    name: Regression tests
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run the test
+      run: |
+        python runTest.py
